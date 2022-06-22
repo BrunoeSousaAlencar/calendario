@@ -60,11 +60,8 @@ for(let i = 1; i <= lastDay; i++){
 for(let j = 1; j <= nextDays; j++){
     days += `<div class="next-date">${j}</div>`
 }
-
-
 }
-
-
+ 
 document.querySelector('.prev').addEventListener('click', ()  =>{
     date.setMonth(date.getMonth() - 1)
     renderCalender();
