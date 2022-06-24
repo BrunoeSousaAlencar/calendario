@@ -1,14 +1,10 @@
-//formatar data padrão brasileiro
-let data = new Date ();
+now = new Date
 
-function formatarData(data){
-    let newDate = new Date(data);
-    return `${newDate.getDate()} 0${newDate.getMonth()+1} ${newDate.getFullYear()}`;
-}
+semana = new Array("Domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado")
 
-document.getElementById('data').innerHTML = formatarData(data)
+mes = new Array ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "agosto", "outubro", "novembro", "dezembro")
 
-
+document.getElementById("data").innerHTML = (now.getDate()+', ' + semana[now.getDay()]+'-feira , '+ mes [now.getDay()]+ " de " + now.getFullYear())
 
 
 
