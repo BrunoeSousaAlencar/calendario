@@ -16,8 +16,8 @@ document.getElementById("data").innerHTML = (now.getDate()+ ", " + semana[now.ge
 hoje = now.getDay()
 
 if( hoje == 0 )
-    document.getElementById("dom").innerHTML = ("#####")
-
+    document.getElementById("dom").innerHTML = ("#85C8F2")
+    document.getElementById('dom').style.borderRadius = '5px';
 if( hoje == 1 )
     document.getElementById('seg').style.backgroundColor = "#85C8F2";
     document.getElementById('seg').style.borderRadius = '5px';
@@ -42,23 +42,34 @@ if( hoje == 6 )
     document.getElementById('sab').style.backgroundColor = "#85C8F2";
     document.getElementById('sab').style.borderRadius = '5px';
 
-//fim dias sa semana
+//fim dias da semana
 
+// que dia é hoje
+let diaMes = 0
 if (mes[now.getDay() -1] =='junho' || mes[now.getDay() -1] =='setembro' || mes[now.getDay() -1] =='novembro' || mes[now.getDay() -1] =='abril')
     diaMes = 30
 if (mes[now.getDay() -1] =='janeiro' || mes[now.getDay() -1] =='dezembro' || mes[now.getDay() -1] =='março' || mes[now.getDay() -1] =='outubro' || mes[now.getDay() -1] =='maio' || mes[now.getDay() -1] =='agosto' || mes[now.getDay() -1] =='julho'){
     diaMes = 31
 }
-
 if(mes[now.getDay() -1] =='fevereiro'){
     diaMes = 28
 }
-
 
 let days = "";
 for (let i = 1; i <= diaMes; i++){
     days += `<div>${i}</div>`;
     document.querySelector('.days').innerHTML = days
+    document.querySelector('.prev-date').innerHTML = days
 }
 
 
+if (mes[now.getDay() -1] == 'junho')
+    today = 31
+
+    let day = "";
+    for (let i = 28; i <= today ; i++){
+        day += `<div></div>`;
+        document.querySelector('.prev-date').innerHTML = day
+    }
+
+document.querySelector(div)
