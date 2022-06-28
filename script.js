@@ -5,9 +5,9 @@ semana = new Array ("domingo", "segunda", "terça", "quarta", "quinta", "sexta",
 
 mes = new Array ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro")
 
-document.getElementById("mes").innerHTML = (mes[now.getDay() -1])
+document.getElementById("mes").innerHTML = (mes[now.getMonth()])
 
-console.log(mes[now.getDay() -1])
+console.log(now.getMonth())
 
 document.getElementById("data").innerHTML = (now.getDate()+ ", " + semana[now.getDay()]+" de " + now.getFullYear())
 //fim do calendário
@@ -46,12 +46,12 @@ if( hoje == 6 )
 
 // que dia é hoje
 let diaMes = 0
-if (mes[now.getDay() -1] =='junho' || mes[now.getDay() -1] =='setembro' || mes[now.getDay() -1] =='novembro' || mes[now.getDay() -1] =='abril')
+if (mes[now.getMonth() -1] =='junho' || mes[now.getMonth() -1] =='setembro' || mes[now.getMonth() -1] =='novembro' || mes[now.getMonth() -1] =='abril')
     diaMes = 30
-if (mes[now.getDay() -1] =='janeiro' || mes[now.getDay() -1] =='dezembro' || mes[now.getDay() -1] =='março' || mes[now.getDay() -1] =='outubro' || mes[now.getDay() -1] =='maio' || mes[now.getDay() -1] =='agosto' || mes[now.getDay() -1] =='julho'){
+if (mes[now.getMonth() -1] =='janeiro' || mes[now.getMonth() -1] =='dezembro' || mes[now.getMonth() -1] =='março' || mes[now.getMonth() -1] =='outubro' || mes[now.getMonth() -1] =='maio' || mes[noMogetMonth() -1] =='agosto' || mes[now.getMonth() -1] =='julho'){
     diaMes = 31
 }
-if(mes[now.getDay() -1] =='fevereiro'){
+if(mes[now.getMonth() -1] =='fevereiro'){
     diaMes = 28
 }
 
@@ -59,17 +59,4 @@ let days = "";
 for (let i = 1; i <= diaMes; i++){
     days += `<div>${i}</div>`;
     document.querySelector('.days').innerHTML = days
-    document.querySelector('.prev-date').innerHTML = days
 }
-
-
-if (mes[now.getDay() -1] == 'junho')
-    today = 31
-
-    let day = "";
-    for (let i = 28; i <= today ; i++){
-        day += `<div></div>`;
-        document.querySelector('.prev-date').innerHTML = day
-    }
-
-document.querySelector(div)
