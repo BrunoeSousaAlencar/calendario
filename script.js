@@ -58,5 +58,20 @@ if(mes[now.getMonth() -1] =='fevereiro'){
 let days = "";
 for (let i = 1; i <= diaMes; i++){
     days += `<div>${i}</div>`;
+    if(i == 28){
+
+    }
     document.querySelector('.days').innerHTML = days
 }
+
+
+function depois(){
+    document.getElementById('mes').innerHTML = mes[now.getMonth()+1]
+}
+
+function antes(){
+    
+    document.getElementById('mes').innerHTML = mes[now.getMonth()-1]
+}
+
+

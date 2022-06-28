@@ -14,12 +14,12 @@
     <div class="container">
         <div class="calendar">
             <div class="month">
-                <i class="fas fa-angle-left prev"></i>
+                <i id="beforem" onclick="antes()" class="fas fa-angle-left prev"></i>
                 <div class="date">
                     <h1 id="mes">[Verifique sua internete..]</h1>
                     <p id="data"></p>
                 </div>
-                <i class="fas fa-angle-right next"></i>
+                <i id="nextm" onclick="depois()" class="fas fa-angle-right next"></i>
             </div>
             <div class="weekdays">
                 <div  id="dom">Dom</div>
@@ -30,13 +30,10 @@
                 <div id="sex">Sex</div>
                 <div id="sab">Sáb</div>
             </div>
-            <div class="numeros">
+            <div>
                 <div class="prev-date"></div>
-                <div class="days">
-                </div>
-                <div class="next-date">
-                    
-                </div>
+                <div class="days"></div>
+                <div class="next-date"></div>
             </div> 
         </div>
     </div>
