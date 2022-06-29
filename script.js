@@ -1,3 +1,5 @@
+charset="UTF-8";
+
 //topo do calendário
 now = new Date
 
@@ -10,9 +12,9 @@ document.getElementById("mes").innerHTML = (mes[now.getMonth()])
 console.log(now.getMonth())
 
 document.getElementById("data").innerHTML = (now.getDate()+ ", " + semana[now.getDay()]+" de " + now.getFullYear())
-//fim do calendário
+//fim topo do calendário
 
-// dias da semana
+//semana
 hoje = now.getDay()
 
 if( hoje == 0 )
@@ -42,13 +44,14 @@ if( hoje == 6 )
     document.getElementById('sab').style.backgroundColor = "#85C8F2";
     document.getElementById('sab').style.borderRadius = '5px';
 
-//fim dias da semana
+//fim semana
 
-// que dia é hoje
+// quantidade dias do mês
 let diaMes = 0
-if (mes[now.getMonth() -1] =='junho' || mes[now.getMonth() -1] =='setembro' || mes[now.getMonth() -1] =='novembro' || mes[now.getMonth() -1] =='abril')
+if (mes[now.getMonth() -1] =='junho' || mes[now.getMonth() -1] =='setembro' || mes[now.getMonth() -1] =='novembro' || mes[now.getMonth() -1] =='abril'){
     diaMes = 30
-if (mes[now.getMonth() -1] =='janeiro' || mes[now.getMonth() -1] =='dezembro' || mes[now.getMonth() -1] =='março' || mes[now.getMonth() -1] =='outubro' || mes[now.getMonth() -1] =='maio' || mes[noMogetMonth() -1] =='agosto' || mes[now.getMonth() -1] =='julho'){
+}
+if (mes[now.getMonth() -1] =='janeiro' || mes[now.getMonth() -1] =='dezembro' || mes[now.getMonth() -1] =='março' || mes[now.getMonth() -1] =='outubro' || mes[now.getMonth() -1] =='maio' || mes[getMonth() -1] =='agosto' || mes[now.getMonth() -1] =='julho'){
     diaMes = 31
 }
 if(mes[now.getMonth() -1] =='fevereiro'){
@@ -58,20 +61,29 @@ if(mes[now.getMonth() -1] =='fevereiro'){
 let days = "";
 for (let i = 1; i <= diaMes; i++){
     days += `<div>${i}</div>`;
-    if(i == 28){
-
-    }
-    document.querySelector('.days').innerHTML = days
+    document.querySelector('.days').innerHTML = "5"+ days
 }
+// fim quantidade dias do mês
 
 
+//botoes do mês
 function depois(){
     document.getElementById('mes').innerHTML = mes[now.getMonth()+1]
 }
 
 function antes(){
-    
+    mes[now.getMonth()]
     document.getElementById('mes').innerHTML = mes[now.getMonth()-1]
 }
 
 
+
+
+
+
+
+
+
+
+
+//fim botoes do mês
